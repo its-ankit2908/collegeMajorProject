@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../Bootstrap//css//bootstrap.min.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.1/css/all.min.css"
+      integrity="sha512-9my9Mb2+0YO+I4PUCSwUYO7sEK21Y0STBAiFEYoWtd2VzLEZZ4QARDrZ30hdM1GlioHJ8o8cWQiy8IAb1hy/Hg=="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
+    <title>Document</title>
+    <style>
+      .swiper-container {
+        width: 100%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+      }
+
+      .swiper-slide {
+        background-position: center;
+        background-size: cover;
+        width: 320px;
+        background: #d1ebff;
+        /* height: 300px; */
+        filter: blur(4px);
+        box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+      }
+
+      .swiper-slide-active {
+        filter: blur(0);
+        background: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <nav  class="home-nav"> -->
+    <nav class="navbar navbar-expand-lg position-fixed">
+      <a class="navbar-brand" href="#">
+        <img
+          src="../images/logo1-removebg-preview.png"
+          width="50"
+          height="50"
+          alt=""
+        />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- search box -->
+
+        <div class="wrapper form-inline my-2 my-lg-0">
+          <div class="search-input">
+            <input
+              type="text"
+              name="searchbox"
+              id="searchbox"
+              placeholder="Type to Search..."
+            />
+            <div class="autocom-box">
+              <!-- <li>Finding purpose & meaning in life</li>
+                 <li>Understanding medical Research</li>
+                 <li>Japanese for Beginners</li>
+                 <li>Machine Learning</li>
+                 <li>AI for everyone</li> -->
+            </div>
+            <div class="icon"><i class="fas fa-search"></i></div>
+          </div>
+        </div>
+        <!-- search box -->
+        <span class="form-inline micbx">
+            <i class="fas fa-microphone text-white" style="font-size: 20px;" ></i>
+        </span>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            
+          <a href="#" class="nav-link" type="button" data-toggle="modal" data-target=".signup-modal-lg" >Sign In</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- </nav> -->
+
+    <!-- slider section -->
+    <section class="home-slider container-fluid m-0 p-0">
+      <div
+        id="carouselExampleSlidesOnly"
+        class="carousel slide h-100"
+        data-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              class="d-block w-100"
+              src="../images/sec-3.jpg"
+              alt="First slide"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              class="d-block w-100"
+              src="../images/sec-2.jpg"
+              alt="Second slide"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              class="d-block w-100"
+              src="../images/sec-4.jpg"
+              alt="Third slide"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- second section -->
+    <section class="sec container-fluid">
+      <div class="container">
+        <h2>Sections</h2>
+      </div>
+    </section>
+
+
+    <!-- third section -->
+    <section class="sec container-fluid">
+      <div class="container">
+        <h2>Sections</h2>
+
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide" style="max-width: 18rem">
+              <!--slide start-->
+              <div class="imgbx">
+
+                <img  src="../images//mobiles/apple-iphone-11.jpeg" alt="">
+              </div>
+            </div>
+            <!--slide end-->
+
+            <div class="swiper-slide" style="max-width: 18rem">
+              <!--slide start-->
+               <div class="imgbx">
+
+                 <img src="../images/mobiles/apple-iphone-12.jpeg" alt="">
+               </div>
+            </div>
+            <!--slide end-->
+            <div class="swiper-slide" style="max-width: 18rem">
+              <!--slide start-->
+              <div class="imgbx">
+
+                <img src="../images//mobiles/apple-iphone-se.jpeg" alt="">
+              </div>
+            </div>
+            <!--slide end-->
+          </div>
+          <!-- Add Pagination -->
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- fourth section -->
+    <section class="sec container-fluid">
+      <div class="container">
+        <h2>Sections</h2>
+      </div>
+    </section>
+
+    <!-- modal for register and login  -->
+    
+
+<!-- Modal -->
+
+<div class="modal fade signup-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header p-2">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body m-0 p-0">
+        <div class="signupContainer">
+          <div class="user signinBx">
+              <div class="imgbx">
+                <img src="../images/logo1-removebg-preview.png" alt="">
+              </div>
+              <div class="formBx">
+                  <form action="">
+                      <h2>Sign In</h2>
+                      <input type="text" name="stuLogName" placeholder="Username/Email/Mobile No." >
+                      <input type="password" name="stuLogPass" placeholder="Password">
+                      <p class="signup text-right" style="font-size:10px; margin:0 5px;"><a href="#">Forgot Password? </a></p>
+                      <input type="submit" value="Login" name="loginBtn">
+                      <p class="signup">New User? <a href="#" onclick="toggleClass();">Sign Up.</a></p>
+                  </form>
+              </div>
+          </div>
+          <div class="user signupBx">
+              <div class="formBx">
+                  <form action=""  class="modal-form" id="modal-form">
+                      <h2>Create an account</h2>
+                      <div class="modal-form-control">
+                        <input type="text" name="username" id="username" autocomplete="off" placeholder="Username" >
+                        <i class="far fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small id="msg">error msg</small>
+                    </div>
+
+                    <div class="modal-form-control">
+                      <input type="email" name="email" id="email" autocomplete="off" placeholder="Email" >
+                      <i class="far fa-check-circle"></i>
+                      <i class="fas fa-exclamation-circle"></i>
+                      <small id="msg">error msg</small>
+                  </div>
+                  <div class="modal-form-control">
+                      <input type="number" name="phone" id="phone" autocomplete="off" placeholder="Phone" >
+                      <i class="far fa-check-circle"></i>
+                      <i class="fas fa-exclamation-circle"></i>
+                      <small id="msg">error msg</small>
+                  </div>
+                  <div class="modal-form-control">
+                      <input type="password" name="password" id="password" autocomplete="off" placeholder="Password" >
+                      <i class="far fa-check-circle"></i>
+                      <i class="fas fa-exclamation-circle"></i>
+                      <small id="msg">error msg</small>
+                  </div>
+                  <div class="modal-form-control">
+                      <input type="password" name="cpassword" id="cpassword" autocomplete="off"  placeholder="Confirm Password" >
+                      <i class="far fa-check-circle"></i>
+                      <i class="fas fa-exclamation-circle"></i>
+                      <small id="msg">error msg</small>
+                  </div>
+  
+
+
+                      <input type="submit" value="Sign Up" role="button" name="signBtn">
+                      <p class="signup">Already have an account? <a href="#" onclick="toggleClass();">Sign In.</a></p>
+                  </form>
+              </div>
+              <div class="imgbx" style="background:#000">
+                 <img src="../images/logo1-removebg-preview.png" alt="">
+              </div>
+          </div>
+      </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+    <!-- modal for register and login  -->
+
+
+
+    <!-- bootstrap start js -->
+    <script src="../Bootstrap/js/jquery.js"></script>
+    <script src="../Bootstrap/js/bootstrap.min.js"></script>
+    <!-- bootstrap end js -->
+    <script src="../Bootstrap/js/validation.js"></script>
+    <!-- swiper.js -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".swiper-container", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        coverflowEffect: {
+          rotate: 0,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+        },
+        //   pagination: {
+        //     el: '.swiper-pagination',
+        //   },
+        loop: true,
+      });
+    </script>
+    <!-- swiper.js -->
+      
+    <script type="text/javascript">
+      function toggleClass()
+      {
+          console.log("clicked")
+          const container = document.querySelector('.signupContainer');
+          container.classList.toggle('active');
+      }
+
+ </script>
+  </body>
+</html>

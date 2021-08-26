@@ -1,0 +1,440 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  background: #000 !important;
+  z-index: 1;
+  width: 100%;
+}
+
+.nav-link {
+  color: #fefefe !important;
+}
+
+/* search box css */
+.wrapper {
+  width: 400px;
+  max-width: 400px;
+  margin: 50px 25px;
+}
+
+.wrapper .search-input {
+  position: relative;
+  background: #dce2e9;
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 0 1px 5px 3px rgba(0, 0, 0, 0.2);
+}
+
+.wrapper .search-input input {
+  width: 100%;
+  height: 40px;
+  outline: none;
+  border: none;
+  background: #fff;
+  border-radius: 5px;
+  padding: 0 40px 0 10px;
+  font-size: 16px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.search-input .icon {
+  height: 45px;
+  width: 45px;
+  line-height: 45px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: center;
+  font-size: 20px;
+  /* color:rgb(18, 18, 122); */
+  color: #000;
+  cursor: pointer;
+}
+
+.search-input .autocom-box {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  padding: 10px 8px;
+  max-height: 280px;
+  overflow-y: hidden;
+  display: none;
+  pointer-events: none;
+
+  background: #fff;
+}
+
+.search-input.active .autocom-box {
+  display: block;
+  pointer-events: auto;
+}
+
+.autocom-box .search-item {
+  padding: 0;
+  list-style: none;
+  width: 100%;
+  cursor: default;
+  border-radius: 3px;
+  opacity: 0;
+  pointer-events: none;
+  color: #000;
+  background: #fff;
+}
+
+.search-input.active .autocom-box .search-item {
+  padding: 8px 12px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.autocom-box li:hover {
+  background: #efefef;
+}
+
+.search-input.active .autocom-box input[type="submit"]:hover {
+  background: #ccc;
+}
+
+/* search box css */
+
+/* css of sections */
+
+.home-slider {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.micbx i {
+  cursor: pointer;
+  transition: 0.3s;
+  transform-origin: center;
+}
+
+.micbx i:hover {
+  font-size: 23px !important;
+}
+
+.sec {
+  position: relative;
+  width: 100%;
+  /* display: flex;
+   justify-content: center;
+   align-items: center; */
+  height: 100vh;
+  overflow: hidden;
+}
+
+.sec:nth-child(2) {
+  background: url(../images/sec-1.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.sec:nth-child(3) {
+  background: url(../images/sec-2.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.sec:nth-child(4) {
+  background: url(../images/sec-3.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.sec:nth-child(5) {
+  background: url(../images/sec-4.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.sec h2 {
+  color: #ccc;
+}
+
+.imgbx {
+  /* position: relative; */
+  width: 200px;
+  height: 300px;
+  overflow: hidden;
+}
+
+.imgbx img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* css of sections */
+
+/* css of modal */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+/* .signupContainer
+{   
+    position: relative;
+     min-height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fee648;
+    padding: 20px;
+} */
+
+.signupContainer {
+  position: relative;
+  width: 100%;
+  height: 520px;
+  background: #fff;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.signupContainer .user {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.signupContainer .user .imgbx {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  background: #000;
+  transition: 0.5s;
+}
+
+.signupContainer .user .imgbx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.signupContainer .user .formBx {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  transition: 0.5s;
+}
+
+.signupContainer .user .formBx form h2 {
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.modal-form-control {
+  position: relative;
+  /* margin: 4px 0; */
+  width: 100%;
+}
+
+.signupContainer .user .formBx form input {
+  position: relative;
+  width: 100%;
+  padding: 10px;
+  background: #f5f5f5;
+  color: #333;
+  border: none;
+  /* border-bottom: 2px solid #ccc; */
+  outline: none;
+  box-shadow: none;
+  margin: 4px 0;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: 300;
+  transition: all 1s ease;
+}
+
+.formBx .modal-form input:focus{
+
+  border-bottom: 2px solid #3c1053 !important;
+}
+
+
+.formBx .modal-form-control  i{
+  position: absolute;
+  right: -20px;
+  top: 14px;
+  visibility: hidden;
+}
+
+.formBx .modal-form-control small{
+
+    font-size: 0.7em;
+    font-weight: 200;
+    visibility: hidden;
+}
+
+.signupContainer .user .formBx .modal-form input[type="submit"], 
+  .signupContainer .user .formBx form input[type="submit"]{
+  max-width: 100px;
+  background: #677eff;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  letter-spacing: 1px;
+  transition: 0.5s;
+}
+
+/* for success */
+ .modal-form .modal-form-control.success input{
+  
+    border-bottom: 2px solid rgb(21, 177, 21) !important;
+}
+    
+ .modal-form .modal-form-control.success i.fa-check-circle{
+
+    color: rgb(21, 177, 21);
+    visibility: visible;
+}
+
+ .modal-form .modal-form-control.success small{
+
+    color:rgb(21, 177, 21);
+    visibility: visible;
+} 
+
+
+ /* for error */
+ .modal-form .modal-form-control.error input{
+  
+    border-bottom: 2px solid rgb(185, 14, 14) !important;
+}
+    
+ .modal-form .modal-form-control.error i.fa-exclamation-circle{
+
+    color: rgb(185, 14, 14);
+    visibility: visible;
+}
+
+.modal-form .modal-form-control.error small{
+
+    color:rgb(185, 14, 14); 
+    visibility: visible;
+} 
+
+/* end of error */
+
+
+.signupContainer .user .formBx form .signup {
+  position: relative;
+  margin-top: 20px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #555;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.signupContainer .user .formBx form .signup a {
+  font-weight: 600;
+  text-decoration: none;
+  color: #677eff;
+}
+
+.signupContainer .signupBx {
+  pointer-events: none;
+}
+
+.signupContainer.active .signupBx {
+  pointer-events: initial;
+}
+
+.signupContainer .signupBx .formBx {
+  left: 100%;
+}
+
+.signupContainer.active .signupBx .formBx {
+  left: 0;
+}
+
+.signupContainer .signupBx .imgbx {
+  left: -100%;
+}
+
+.signupContainer.active .signupBx .imgbx {
+  left: 0;
+}
+
+.signupContainer .signinBx .formBx {
+  left: 0;
+}
+
+.signupContainer.active .signinBx .formBx {
+  left: 100%;
+}
+
+.signupContainer .signinBx .imgbx {
+  left: 0;
+}
+
+.signupContainer.active .signinBx .imgbx {
+  left: -100%;
+}
+
+@media (max-width: 991px) {
+  .signupContainer {
+    /* flex-direction: column; */
+    max-width: 400px;
+  }
+  .signupContainer .imgbx {
+    display: none;
+  }
+
+  .signupContainer .user .formBx {
+    width: 100%;
+  }
+}
+
+/* css of modal */
+
+
+
+/* bootstrap overwrite */
+
+@media (min-width: 992px){
+
+  .modal-lg, .modal-xl {
+    max-width: 850px;
+  }
+}
