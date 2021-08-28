@@ -4,6 +4,64 @@
   box-sizing: border-box;
 }
 
+/* ripple effect */
+
+.ripple{
+  position: relative;
+  /* display: inline-block; */
+  /* padding: 12px 36px; */
+  /* margin: 10px 0; */
+  color:#fff;
+  text-decoration: none;
+  /* text-transform: uppercase; */
+  font-size: 18px;
+  letter-spacing: 2px;
+  border-radius: 40px;
+  overflow: hidden;
+  /* background: linear-gradient(90deg,#0162c8,#55e7fc); */
+}
+
+.ripple-circle{
+ 
+  position: relative;
+  display: inline-block;
+  padding: 12px 20px;
+  color:#fff;
+  text-decoration: none;
+  /* text-transform: uppercase; */
+  font-size: 18px;
+  letter-spacing: 2px;
+  border-radius: 50%;
+  overflow: hidden;
+  /* background: linear-gradient(90deg,#0162c8,#55e7fc); */
+}
+
+.ripple-circle span,
+.ripple span{
+   position: absolute;
+   background: #fff;
+   transform: translate(-50%,-50%);
+   pointer-events: none;
+   border-radius: 50%;
+   animation: ripple 1s linear infinite;
+}
+
+@keyframes ripple{
+   0%{
+     width: 0px;
+     height: 0px;
+     opacity: 0.5;
+   }
+   100%{
+     width: 500px;
+     height: 500px;
+     opacity: 0;
+   }
+}
+
+/* ripple effect */
+
+
 .navbar {
   background: #000 !important;
   z-index: 1;
@@ -154,13 +212,6 @@
   background-attachment: fixed;
 }
 
-.sec:nth-child(5) {
-  background: url(../images/sec-4.jpg);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
 
 .sec h2 {
   color: #ccc;
@@ -186,12 +237,6 @@
 
 /* css of modal */
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: sans-serif;
-}
 
 /* .signupContainer
 {   
@@ -429,6 +474,118 @@
 /* css of modal */
 
 
+/* sec-3 aboutus + footer */
+.sec-3{
+
+  position: relative;
+  width: 100%;
+  /* display: flex;
+   justify-content: center;
+   align-items: center; */
+  background: url(../images/sec-4.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.sec-3::before{
+   content: '';
+   position: absolute;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   background: rgba(0, 0, 0, 0.8);
+}
+
+ .layer-1{
+   position: relative;
+   width: 50%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   /* background: blue; */
+   min-height: 100vh;
+   flex-wrap: wrap;
+ 
+  }
+/* cards of about us */
+.about-card{
+  position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   width: 100%;
+}
+
+.about-card .imgbx{
+  position: relative;
+  width: 120px;
+  height: 120px;
+  background: yellow;
+  border-radius: 50%;
+  border: 3px solid #000;
+  overflow: hidden;
+}
+
+/* cards of about us */
+ 
+
+
+
+ .layer-2{
+  position: relative;
+  right: 0;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* background: red; */
+  min-height: 100vh;
+}
+.layer-2 .footer{
+    position: absolute;
+    bottom: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     text-align: center;
+}
+
+.layer-2 .footer p{
+    font-size: 14px;
+    color:#fff;
+    line-height: 1.8em;
+}
+ 
+.media-tags{
+   position: relative;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+  
+}
+.media-tags li{
+   list-style: none;
+   margin: 20px 0;
+}
+
+.media-tags li a{
+  color:#fff !important;
+  font-size: 25px;
+}
+
+.media-tags li a i{
+  color:#fff !important;
+  
+}
 
 /* bootstrap overwrite */
 
@@ -436,5 +593,13 @@
 
   .modal-lg, .modal-xl {
     max-width: 850px;
+  }
+
+}
+
+@media(max-width:1000px){
+  
+  .sec-content{
+    flex-direction: column;
   }
 }

@@ -17,6 +17,9 @@
       href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
 
+    
+
+
     <title>Document</title>
     <style>
       .swiper-container {
@@ -41,6 +44,68 @@
         background: #fff;
       }
     </style>
+    <style>
+       
+
+      .swiper {
+        width: 240px;
+        height: 320px;
+      }
+
+      .swiper-slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 18px;
+        font-size: 22px;
+        font-weight: bold;
+        color: #000;
+        background-color: #fff;
+      }
+
+
+
+      /* .swiper-slide:nth-child(1n) {
+        background-color: rgb(206, 17, 17);
+      }
+
+      .swiper-slide:nth-child(2n) {
+        background-color: rgb(0, 140, 255);
+      }
+
+      .swiper-slide:nth-child(3n) {
+        background-color: rgb(10, 184, 111);
+      }
+
+      .swiper-slide:nth-child(4n) {
+        background-color: rgb(211, 122, 7);
+      }
+
+      .swiper-slide:nth-child(5n) {
+        background-color: rgb(118, 163, 12);
+      }
+
+      .swiper-slide:nth-child(6n) {
+        background-color: rgb(180, 10, 47);
+      }
+
+      .swiper-slide:nth-child(7n) {
+        background-color: rgb(35, 99, 19);
+      }
+
+      .swiper-slide:nth-child(8n) {
+        background-color: rgb(0, 68, 255);
+      }
+
+      .swiper-slide:nth-child(9n) {
+        background-color: rgb(218, 12, 218);
+      }
+
+      .swiper-slide:nth-child(10n) {
+        background-color: rgb(54, 94, 77);
+      } */
+
+    </style>
   </head>
   <body>
     <!-- <nav  class="home-nav"> -->
@@ -62,7 +127,7 @@
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
-        <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon" style="outline:none;" ></span>
       </button>
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -88,12 +153,12 @@
         </div>
         <!-- search box -->
         <span class="form-inline micbx">
-            <i class="fas fa-microphone text-white" style="font-size: 20px;" ></i>
+            <a href="#" class="ripple-circle"><i class="fas fa-microphone text-white" style="font-size: 20px;" ></i></a>
         </span>
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
             
-          <a href="#" class="nav-link" type="button" data-toggle="modal" data-target=".signup-modal-lg" >Sign In</a>
+          <a href="#" class="nav-link ripple" type="button" data-toggle="modal" data-target=".signup-modal-lg" >Sign In</a>
           </li>
         </ul>
       </div>
@@ -184,9 +249,100 @@
 
 
     <!-- fourth section -->
-    <section class="sec container-fluid">
-      <div class="container">
-        <h2>Sections</h2>
+    <section class="sec-3 container-fluid">
+        
+      <div class="sec-content d-flex justify-content-center align-items-center">
+        <div class="layer-1 flex-column">
+          <div class="row position-absolute" style="top:20px;" >
+            <div class="col-sm-12 text-center text-white">
+              <h2 >About Us</h2>
+            </div>
+          </div>
+
+           <div class="row">
+             <div class="col-sm">
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+
+                   <div class="about-card">
+                     <div class="imgbx">
+                        <img src="../images/christian.jpg" class="img-fluid" alt="">
+                     </div>
+                     <br>
+                     <div class="content text-center">
+                       <h4 class="text-muted" >Ankit Patel</h4>
+                         <h5 class="text-black-50" style="font-size: 12px;" >ankit@gmail.com</h2>
+                          <h5  class="text-black-50"style="font-size: 12px;" >MERN Stack Developer</h5>
+                     </div>
+                   </div>
+
+                </div>
+                <div class="swiper-slide">
+                  <div class="about-card">
+                     <div class="imgbx">
+                        <img src="../images/christian.jpg" class="img-fluid" alt="">
+                     </div>
+                     <br>
+                     <div class="content text-center">
+                       <h4 class="text-muted" >Ankit Patel</h4>
+                         <h5 class="text-black-50" style="font-size: 12px;" >ankit@gmail.com</h2>
+                          <h5  class="text-black-50"style="font-size: 12px;" >MERN Stack Developer</h5>
+                     </div>
+                   </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="about-card">
+                    <div class="imgbx">
+                       <img src="../images/christian.jpg" class="img-fluid" alt="">
+                    </div>
+                    <br>
+                    <div class="content text-center">
+                      <h4 class="text-muted" >Ankit Patel</h4>
+                        <h5 class="text-black-50" style="font-size: 12px;" >ankit@gmail.com</h2>
+                         <h5  class="text-black-50"style="font-size: 12px;" >MERN Stack Developer</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+           
+
+           </div>
+           
+        </div>
+        <div class="layer-2 " style="background: #000;">
+          <div class="row position-absolute"  style="top:20px;">
+            <div class="col-sm-12 text-center text-white">
+              <h2>Contact Us</h2>
+            </div>
+          </div>
+                <div class="row w-100">
+                   <div class="col-sm-3">
+                        <ul class="media-tags">
+                            
+                              <li><a class="text-white" href="#"><i class="fab fa-facebook"></i></a></li>
+                              <li><a href="#"> <i class="fab fa-instagram"></i></a></li>
+                              <li><a href="#"> <i class="fab fa-linkedin"></i></a></li>
+                              <li><a href="#"> <i class="fab fa-google-plus"></i></a></li>
+                            
+                          </ul>
+                   </div>
+                  <div class="col-sm-9">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3682.858845253381!2d75.80073581479303!3d22.621745685157457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962f9423ee63999%3A0x27662778b2818cb4!2sMedicaps%20university%20rau!5e0!3m2!1sen!2sin!4v1630049100079!5m2!1sen!2sin" 
+                    width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                  </div>
+                </div>
+
+                <div class="row footer w-100 p-0 m-0">
+                  <div class="col-sm-12">
+                       <p class="text-white">copyright dfaklrhgnrlae</p>
+                  </div>
+                </div>
+            </div>
+        </div>
       </div>
     </section>
 
@@ -238,7 +394,7 @@
                       <small id="msg">error msg</small>
                   </div>
                   <div class="modal-form-control">
-                      <input type="number" name="phone" id="phone" autocomplete="off" placeholder="Phone" >
+                      <input type="text" name="phone" id="phone" autocomplete="off" placeholder="Phone" >
                       <i class="far fa-check-circle"></i>
                       <i class="fas fa-exclamation-circle"></i>
                       <small id="msg">error msg</small>
@@ -281,6 +437,7 @@
     <script src="../Bootstrap/js/bootstrap.min.js"></script>
     <!-- bootstrap end js -->
     <script src="../Bootstrap/js/validation.js"></script>
+    <script src="../Bootstrap/js/index.js"></script>
     <!-- swiper.js -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
@@ -313,5 +470,11 @@
       }
 
  </script>
+ <script>
+  var swiper = new Swiper(".mySwiper", {
+    effect: "cards",
+    grabCursor: true,
+  });
+</script>
   </body>
 </html>
