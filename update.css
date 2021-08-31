@@ -1,0 +1,35 @@
+
+.heading{
+     position: relative;
+     color: #fff;
+}
+
+.product-card{
+ position: relative;
+ width: 16rem;
+ background: #fefefe;
+ padding: 5px;
+ border-radius: 10px;
+ margin:8px auto;
+}
+
+.product-card .img-bx{
+    position: relative;
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+}
+
+.product-card .img-bx img{
+     position: absolute;
+     left: 0;
+     top: 0;
+     width: 100%;
+     height: 100%;
+     object-fit: contain;
+}
+
+.product-card .content{
+     position: relative;
+     padding: 10px;
+}
