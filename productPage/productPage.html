@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../Bootstrap//css//bootstrap.min.css" />
+    <link rel="stylesheet" href="../Home/style.css" />
+    <link rel="stylesheet" href="../update.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.1/css/all.min.css"
+      integrity="sha512-9my9Mb2+0YO+I4PUCSwUYO7sEK21Y0STBAiFEYoWtd2VzLEZZ4QARDrZ30hdM1GlioHJ8o8cWQiy8IAb1hy/Hg=="
+      crossorigin="anonymous"
+    />
+
+    <title>Product Details</title>
+    <style>
+       .product-details-page{
+           position: relative;
+           width: 100%;
+           min-height: 100vh;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           flex-direction: column;
+           overflow: hidden;
+
+       } 
+      .productDescriptionContainer {
+        display: flex;
+        box-sizing: border-box;
+        padding: 10px;
+        margin-top: 80px;
+      }
+      .verticalImageStack {
+        width: 67px;
+        display: flex;
+        flex-direction: column;
+      }
+      .thumbnail {
+        width: 63px;
+        height: 63px;
+        border: 1px solid #f0f0f0;
+        overflow: hidden;
+        text-align: center;
+      }
+      .thumbnail img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+      }
+      .thumbnail.active {
+        border: 2px solid #2874f0;
+      }
+      .productDescContainer {
+        width: 485px;
+        
+      }
+      .productDescImgContainer {
+        width: 485px;
+        height: 400px;
+        overflow: hidden;
+        text-align: center;
+        border: 1px solid #f0f0f0;
+      }
+      .productDescImgContainer > img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+      }
+      .breed ul {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+      }
+      .breed ul li {
+        list-style: none;
+        margin-right: 5px;
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+      }
+      .breed ul li a {
+        text-decoration: none;
+        color: #777;
+        display: inline-block;
+        font-size: 12px;
+        margin: 0 10px;
+      }
+      .productDetails {
+        margin: 0 10px;
+      }
+      .productDetails .productTitle {
+        font-size: 18px;
+        color: #212121;
+        font-weight: 400;
+      }
+      .ratingCount {
+        display: inline-block;
+        background: #388e3c;
+        color: #fff;
+        font-weight: 400;
+        font-size: 12px;
+        border-radius: 3px;
+        padding: 2px 5px;
+      }
+      .ratingNumbersReviews {
+        font-size: 12px;
+        color: #777;
+        font-weight: 600;
+        display: inline-block;
+        margin: 0 10px;
+      }
+      .extraOffer,
+      .discount {
+        color: #388e3c;
+        font-size: 12px;
+        margin: 10px 0px;
+        font-weight: 600;
+      }
+      .priceContainer {
+        align-items: center;
+      }
+      .price {
+        font-size: 28px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+      }
+      
+      .product-specification-container{
+          position: relative;
+          width: 100%;
+          margin-top: 50px;
+          border-radius: 4px;
+          background: #fefefe;
+          box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.12), -4px -4px 4px rgba(0, 0, 0, 0.12) ;
+          /* background: #ccc; */
+      }
+
+    </style>
+    <style>
+      /* Material Button */
+      .materialButton {
+          display: inline-block;
+          width: 230px;
+        padding: 15px;
+        font-size: 15px;
+        text-transform: uppercase;
+        outline: none;
+        background-color: #fb641b;
+        color: #fff;
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+        border: none;
+        cursor: pointer;
+        border-radius: 2px;
+      }
+      .materialButton:hover {
+        box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.12);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <nav  class="home-nav"> -->
+    <nav class="navbar navbar-expand-lg position-fixed">
+      <a class="navbar-brand" href="#">
+        <img
+          src="../images/logo1-removebg-preview.png"
+          width="50"
+          height="50"
+          alt=""
+        />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon" style="outline: none"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- search box -->
+
+        <div class="wrapper form-inline my-2 my-lg-0">
+          <div class="search-input">
+            <input
+              type="text"
+              name="searchbox"
+              id="searchbox"
+              placeholder="Type to Search..."
+            />
+            <div class="autocom-box">
+              <!-- <li>Finding purpose & meaning in life</li>
+                 <li>Understanding medical Research</li>
+                 <li>Japanese for Beginners</li>
+                 <li>Machine Learning</li>
+                 <li>AI for everyone</li> -->
+            </div>
+            <div class="icon"><i class="fas fa-search"></i></div>
+          </div>
+        </div>
+        <!-- search box -->
+        <span class="form-inline micbx">
+          <a href="#" class="ripple-circle"
+            ><i class="fas fa-microphone text-white" style="font-size: 20px"></i
+          ></a>
+        </span>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a
+              href="#"
+              class="nav-link ripple"
+              type="button"
+              data-toggle="modal"
+              data-target=".signup-modal-lg"
+              >Sign In</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- </nav> -->
+
+    <section class="product-details-page container-fluid">
+      <div class="productDescriptionContainer">
+        <div class="flexRow d-flex">
+          <div class="verticalImageStack">
+            <!-- vertical images -->
+            <div class="thumbnail" onclick="changeImage('../images/mobiles/m02s-1.jpeg')">
+              <img src="../images/mobiles/m02s-1.jpeg" alt=" " />
+            </div>
+            
+            <div class="thumbnail" onclick="changeImage('../images/mobiles/apple-iphone-12.jpeg')">
+                <img src="../images/mobiles/apple-iphone-12.jpeg"  alt="">
+            </div>
+            
+            <div class="thumbnail" onclick="changeImage('../images/mobiles/samsung-galaxy-a21-2.jpeg')">
+                <img src="../images/mobiles/samsung-galaxy-a21-2.jpeg" alt="">
+            </div>
+            
+            <div class="thumbnail" onclick="changeImage('../images/mobiles/samsung-galaxy-m01-2.jpeg')">
+                <img src="../images/mobiles/samsung-galaxy-m01-2.jpeg" alt="">
+            </div>
+
+          </div>
+          <div class="productDescContainer">
+            <div class="productDescImgContainer">
+              <img
+                src="../images/mobiles/apple-iphone-se.jpeg"
+                alt="product-img"
+                id="main-img-container"
+              />
+            </div>
+
+            <div class="flexRow d-flex mt-3 justify-content-between">
+              
+              <button
+                class="materialButton"
+                style=" color: #fff; font-size: 16px"
+              >
+                Add To Cart
+              </button>
+
+              <button
+                class="materialButton"
+                style="background-color: #2874f0; color: #fff; font-size: 15px"
+              >
+                Buy Now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <!-- {/* home > category > subCategory > productName */} -->
+          <div class="breed">
+            <ul>
+              <li><a href="#">Home</a>></li>
+              <li><a href="#">Mobiles</a>></li>
+              <li><a href="#"> Samsung</a>></li>
+              <li><a href="#"> productName</a>></li>
+            </ul>
+          </div>
+
+          <div class="productDetails mt-2">
+            <p class="productTitle font-weight-bold">Apple iphone 11</p>
+            <div>
+              <span class="ratingCount">4.3 <i class="fas fa-star"></i> </span>
+              <span class="ratingNumbersReviews"
+                >72,234 Ratings & 8,140 Reviews</span
+              >
+            </div>
+            <div class="extraOffer">Extra 4500 off</div>
+            <div class="flexRow priceContainer">
+              <span class="price">&#8377 30,000</span>
+              <span class="discount" style="margin: 0 10px">22% off</span>
+            </div>
+            <div>
+              <p
+                style="
+                    color: #212121; 
+                    font-size: 14px;
+                    font-weight: '600; 
+                    "
+              >
+                Available Offers
+              </p>
+              <p style="display: flex">
+                <span
+                  style="
+                    width: 100px;
+                    font-size: 12px;
+                    color: #878787;
+                    font-weight: 600;
+                    margin-right: 20px;
+                  "
+                  >Description</span
+                >
+                <span style="font-size: 12px; color: #212121"
+                  >Description content Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                  Magnam, delectus? Eaque culpa ipsam laborum aspernatur natus similique, nam quam 
+                  accusamus tempora sint, atque, quas nemo autem? Dignissimos possimus mollitia sit.</span
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-specification-container">
+          <div class="container">
+           <div class="row">
+               <div class="col-sm-12">
+                   <h2 class="text-black-50">Product Details</h2>
+               </div>
+           </div>
+           <div class="row">
+
+               <div class="table-responsive-sm w-100">
+                    <table class="table table-striped table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Specification</th>
+                                <th>Details</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Processor</td>
+                                <td>media dimensity 300</td>
+                            </tr>
+                            <tr>
+                                <td>Battery</td>
+                                <td>4500maH</td>
+                            </tr>
+                            <tr>
+                                <td>RAM</td>
+                                <td>8GB</td>
+                            </tr>
+                            <tr>
+                                <td>Internal</td>
+                                <td>128 GB </td>
+                            </tr>
+                            <tr>
+                                <td>display</td>
+                                <td>full HD Display</td>
+                            </tr>
+                        </tbody>
+                    </table>
+               </div>
+           </div> 
+        </div>
+      </div>
+    </section>
+
+    <!-- bootstrap start js -->
+    <script src="../Bootstrap/js/jquery.js"></script>
+    <script src="../Bootstrap/js/bootstrap.min.js"></script>
+    <!-- bootstrap end js -->
+    <script src="../Bootstrap/js/index.js"></script>
+    <script>
+        const mainimg = document.getElementById("main-img-container");
+
+        const changeImage = function(img){
+            
+            mainimg.setAttribute("src",img);
+        };
+             
+    </script>
+  </body>
+</html>
